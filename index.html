@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <title>BMW MOTOROAD</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- For Scroll Button -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap">
+  <link rel="stylesheet" href="https://mdbootstrap.com/api/snippets/static/download/MDB5-Free_6.3.1/css/mdb.min.css">
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon"
+    href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/BMW_logo_%28gray%29.svg/2048px-BMW_logo_%28gray%29.png"
+    type="image/png">
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+
+</head>
+
+<body>
+
+
+  <!--Navigation Bar-->
+  <nav class="navbar fixed-top navbar-expand-lg " style="background-color: transparent;">
+      <div class="container-fluid">
+      <a class="navbar-collapse ms-2" href="#"
+        style="font-weight: 500; font-family: 'Gill Sans MT'; color: rgb(255, 0, 17); font-size: 25px;"><img
+          class="logo me-2" src="Images/bmw-logo.jpg" alt="bmw-logo" height="30" width="30"> THE BMW</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="ul1">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#models">Models</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#aboutus">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#contactus">Contact Us</a>
+          </li>
+        </ul>
+        <button type="button" class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#signup">
+          Sign Up
+        </button>
+        <button type="button" class="btn btn-dark btn-sm ms-2" data-bs-toggle="modal" data-bs-target="#login">
+          Login
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Modal for Register -->
+  <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Create Account</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="row g-1">
+            <div class="col-md-10">
+              <label for="validationDefault01" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="validationDefault01" required>
+            </div>
+            <div class="col-md-10">
+              <label for="validationDefault02" class="form-label">Username</label>
+              <input type="text" class="form-control" id="validationDefault02" required>
+            </div>
+            <div class="col-md-10">
+              <label for="validationDefaultUsername" class="form-label">Email</label>
+              <div class="input-group">
+                <span class="input-group-text" id="inputGroupPrepend2">Email</span>
+                <input type="email" class="form-control" id="validationDefaultUsername"
+                  aria-describedby="inputGroupPrepend2" required>
+              </div>
+              <div class="col-m-10">
+                <label for="password" class="form-label">Password</label>
+                <input type="text" class="form-control" id="password" required>
+              </div>
+              <div class="col-md-12">
+                <label for="rpassword" class="form-label">Repeat Password</label>
+                <input type="text" class="form-control" id="rpassword" required>
+              </div>
+            </div>
+            <div class="form-check d-flex justify-content-center mb-2">
+              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg">
+              <label class="form-check-label" for="form2Example3g" required="">
+                I agree all statements in
+                <a href="#!" class="text-body"><u>Terms of service</u></a>
+              </label>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+              <button class="btn btn-dark " type="submit">Register</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="login" style="margin-top: 20px;" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Login into your Account</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="needs-validation" novalidate>
+            <div class="form-inline mb-3">
+              <label class="form-label" for="form3Example3cg">Your Email</label>
+              <input type="email" id="form3Example3cg" class="form-control" required />
+            </div>
+            <div class="invalid-feedback">Enter Your Email Adress</div>
+
+            <div class="form-inline mb-2">
+              <label class="form-label" for="form3Example4cg">Password</label>
+              <input type="password" id="form3Example4cg" class="form-control" required />
+            </div>
+            <div class="invalid-feedback">Enter Your Email Adress</div>
+
+            <div class="d-flex justify-content-center">
+              <button type="button" class="btn btn-dark btn-group">
+                Login
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!--Carousel Slideshow-->
+  
+  <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel" data-interval="3000"
+    data-pause="false">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="https://images.unsplash.com/photo-1635073943212-f34dfbfcc3b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Ym13JTIwczEwMDBycnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
+          class="d-block w-100 " alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>BMW S1000RR</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://images.unsplash.com/photo-1635073950366-047545060f8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJtdyUyMHMxMDAwcnJ8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
+          class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>BMW S1000RR</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://external-preview.redd.it/3oN6xheADdTBoB0uo2hlV0WRPni-_22RxvqNYLA3b-M.jpg?auto=webp&s=8cdce6448ee34811b422be371599b1c836f27933"
+          class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>BMW S1000RR</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!--Models of BMW-->
+  <div class="container my-3"style="margin-top: 10px; padding-top: 60px;" id="models">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://img.indianautosblog.com/2021/07/02/new-bmw-g-310-r-blue-metallic-front-right-76e3.jpg"
+            class="card-img-top p-4" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">BMW G310R</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-center">Ex Showroom Price <br>₹ 2,85,929</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://cdn.shopify.com/s/files/1/0265/7763/3377/collections/20-Motorsport.jpg?v=1571510167"
+            class="card-img-top mt-2 py-5 " alt="...">
+          <div class="card-body">
+            <h5 class="card-title ">BMW S1000RR</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-center">Ex Showroom Price<br>₹ 20,25,000.00</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://www.motorcyclediaries.in/wp-content/uploads/2019/11/BMW-F-900-R-3-Motorcyclediaries.jpg"
+            class="card-img-top mt-3 py-2" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">BMW F 900 R</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-black">Ex Showroom Price<br>₹ 10,76,989</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-3">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <img
+            src="https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20210705063618_GS.jpg"
+            class="card-img-top mt-3 py-2" alt="...">
+          <div class="card-body">
+            <h5 class="card-title mt-3">BMW R 1250 GS</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-center">Ex Showroom Price <br>₹ 20,55,000.00</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://ridermagazine.com/wp-content/uploads/2021/10/2022-BMW-K1600GT-P90440621_highRes.jpg"
+            class="card-img-top  mt-3 py-1" alt="...">
+          <div class="card-body mt-3">
+            <h5 class="card-title ">BMW K1600 GT</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-center">Ex Showroom Price<br>₹ 29,59,070</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://gaadiwaadi.com/wp-content/uploads/2021/07/bmw-c400-1068x744.jpeg"
+            class="card-img-top mt-3 py-2" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">BMW C400 GT</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-black">Ex Showroom Price<br>₹ 11,25,000.00</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--About us Page-->
+  <div class="container" id="aboutus" style="margin-top: 10px; padding-top: 60px;">
+    <div class="row featurette d-flex align-items-center justify-content-center">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">The BMW Group company profile. </font>
+          </font><span class="text-body-secondary">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;"></font>
+            </font>
+          </span>
+        </h2>
+        <p class="lead">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">The special fascination of the BMW Group not only lies in its
+              products and technology, but also in the company’s history, written by inventors, pioneers and brilliant
+              designers. </font>
+            <font style="vertical-align: inherit;"> Today, the BMW Group, with more than 30 production and assembly
+              facilities as well as a global sales network, is the world’s leading manufacturer of premium automobiles
+              and motorcycles, and provider of premium financial and mobility services. </font>
+          </font>
+        </p>
+      </div>
+      <div class="col-md-5">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="700"
+          height="700"
+          src="https://www.bmwgroup.com/content/dam/grpw/websites/bmwgroup_com/company/einstiegsseite/P90492929_highRes_the-fully-electric-m.jpg.grp-transform/xxlarge/P90492929_highRes_the-fully-electric-m.jpg"
+          role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%"
+          fill="var(--bs-secondary-color)" dy=".3em"></text></img>
+      </div>
+    </div>
+    <div class="row featurette d-flex align-items-center justify-content-center">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">
+          <font style="vertical-align: inherit;">Production today and tomorrow.</font>
+        </h2>
+        <p class="lead">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">AThe BMW Group sets trends in production technology and
+              sustainability as an innovation leader with an intelligent material mix, a technological shift towards
+              digitalisation and resource-efficient production. At the same time, flexibility and continuous
+              optimisation of value chains ensure competitiveness.</font>
+          </font>
+        </p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="700"
+          height="700"
+          src="https://www.bmwgroup.com/content/dam/grpw/websites/bmwgroup_com/company/einstiegsseite/P90490971_highRes_bmw-i-vision-dee-01-.jpg.grp-transform/xxlarge/P90490971_highRes_bmw-i-vision-dee-01-.jpg"
+          role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%"
+          fill="var(--bs-secondary-color)" dy=".3em"></text></img>
+      </div>
+    </div>
+    <div class="row featurette d-flex align-items-center justify-content-center">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Sustainability: the guiding principle for all our actions.</font>
+          </font><span class="text-body-secondary">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;"></font>
+            </font>
+          </span>
+        </h2>
+        <p class="lead">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Long-term thinking and responsible action are the basis of economic
+              success. Ecological and social sustainability, comprehensive product responsibility and a clear commitment
+              to conserving resources are therefore an integral part of our strategy. </font>
+          </font>
+        </p>
+      </div>
+      <div class="col-md-5">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="700"
+          height="700"
+          src="https://www.bmwgroup.com/content/dam/grpw/websites/bmwgroup_com/company/einstiegsseite/P90434196_highRes_bmw-i-vision-circula.jpg.grp-transform/xxlarge/P90434196_highRes_bmw-i-vision-circula.jpg"
+          role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%"
+          fill="var(--bs-secondary-color)" dy=".3em"></text></img>
+      </div>
+    </div>
+  </div>
+
+  <!--Contact Us Page-->
+  <div class="container-fluid px-5 my-4" style="margin-top: 20px; padding-top: 60px;" id="contactus">
+    <div class="row justify-content-center">
+      <div class="col-xl-10">
+        <div class="card border-0 rounded-5 shadow-lg overflow-hidden">
+          <div class="card-body p-2">
+            <div class="row g-0">
+              <div class="col-md-6 d-flex d-md-block img-fluid bg-image"></div>
+              <div class="col-md-6 p-5">
+                <div class="text-center">
+                  <div class="h3 fw-light" style="font-family:'Helvetica Neue'; font-weight: 500;">Contact Form</div>
+                </div>
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+
+                  <!-- Name Input -->
+                  <div class="form-floating mb-3">
+                    <input class="form-control" id="name" type="text" placeholder="Name"
+                      data-sb-validations="required" />
+                    <label for="name">Name</label>
+                    <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                  </div>
+
+                  <!-- Email Input -->
+                  <div class="form-floating mb-3">
+                    <input class="form-control" id="emailAddress" type="email" placeholder="Email Address"
+                      data-sb-validations="required,email" />
+                    <label for="emailAddress">Email Address</label>
+                    <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.
+                    </div>
+                    <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not
+                      valid.</div>
+                  </div>
+
+                  <!-- Message Input -->
+                  <div class="form-floating mb-3">
+                    <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;"
+                      data-sb-validations="required"></textarea>
+                    <label for="message">Message</label>
+                    <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+                  </div>
+
+                  <!-- Submit success message -->
+                  <div class="d-none" id="submitSuccessMessage">
+                    <div class="text-center mb-3">
+                      <div class="fw-bolder">Form submission successful!</div>
+                      </div>
+                  </div>
+
+                  <!-- Submit error message -->
+                  <div class="d-none" id="submitErrorMessage">
+                    <div class="text-center text-danger mb-3">Error sending message!</div>
+                  </div>
+
+                  <!-- Submit button -->
+                  <div class="d-grid">
+                    <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
+                  </div>
+                </form>
+                <!-- End of contact form -->
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Contact Section -->
+
+
+  <!-- Back to top button -->
+  <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Footer Starts Here -->
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-2 my-2 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+          <img class="bi" width="30" height="30" src="Images/bmw-logo.jpg">
+            <use xlink:href="#bootstrap"></use>
+        </img>
+        </a>
+        <span class="mb-0 mb-md-0 text-body-secondary">©The BMW Company, Inc</span>
+      </div>
+
+      <ul class="nav col-md-5 justify-content-center list-group-small d-flex">
+        <li class="ms-3"><a class="text-secondary" href="#"><i class="bi bi-twitter text-dark" width="24" height="24">
+              <use xlink:href="#twitter"></use></i></a></li>
+        <li class="ms-3"><a class="text-secondary" href="#"><i class="bi bi-instagram" width="24" height="24">
+              <use xlink:href="#instagram"></use>
+        </i></a></li>
+        <li class="ms-3"><a class="text-secondary" href="#"><i class="bi bi-facebook" width="24" height="24">
+              <use xlink:href="#facebook"></use>
+            </i></a></li>
+      </ul>
+    </footer>
+  </div>
+  <!-- Footer Ends Here -->
+
+
+  <!-- Bootstrap Js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript"
+    src="https://mdbootstrap.com/api/snippets/static/download/MDB5-Free_6.3.1/js/mdb.min.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (() => {
+      'use strict'
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll('.needs-validation')
+
+      // Loop over them and prevent submission
+      Array.from(forms).forEach(form => {
+        form.addEventListener('Submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+
+  </script>
+
+</body>
+
+</html>
